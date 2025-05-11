@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tapak Tangan Hero</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icon-192.png" />
+  <meta name="theme-color" content="#00cc66" />
+</head>
+<body>
+  <video id="webcam" autoplay playsinline></video>
+  <div id="pointer"></div>
+  <div id="target"></div>
+  <div id="hud">
+    Skor: <span id="score">0</span><br />
+    Masa: <span id="timer">30</span>
+  </div>
+  <audio id="hit-sound" src="pop.mp3" preload="auto"></audio>
+  <script type="module" src="script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</body>
+</html>

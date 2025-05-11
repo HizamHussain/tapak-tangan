@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: black;
+}
+
+#webcam {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+#pointer, #target {
+  position: absolute;
+  border-radius: 50%;
+}
+
+#pointer {
+  width: 30px;
+  height: 30px;
+  background: rgba(255,255,255,0.8);
+  pointer-events: none;
+}
+
+#target {
+  width: 50px;
+  height: 50px;
+  background: red;
+}
+
+#hud {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  #hud {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  #pointer {
+    width: 20px;
+    height: 20px;
+  }
+
+  #target {
+    width: 40px;
+    height: 40px;
+  }
+}
